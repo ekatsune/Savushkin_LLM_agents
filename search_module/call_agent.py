@@ -60,7 +60,7 @@ class CallAgent(ScAgentClassic):
         link, = get_action_arguments(action_node, 1)
         link_query = get_link_content_data(link)
 
-        api_key = "814aaa3d65cd5cd6dedbab7f8685889419ad93285155ae2d7c1a94869343faa4"
+        api_key = os.environ.get("TOGETHER_AI_API_KEY")
 
         if not api_key:
             error_message = "TOGETHER_AI_API_KEY is not set in environment variables!"
